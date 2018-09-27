@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Dog // main class dog
+{
+    constructor(name) // constructor of the class
+    {
+        this.name=name;       
+    }
+        
+    speak()
+    {
+       return 'woof';
+    }
+}
+class Labrador extends Dog // class labrador inheriting the class Dog
+{
+    constructor(breedWeight,color,name)
+    {
+        super(name); // calling super class constructor
+        this.breedWeight=breedWeight;
+        this.color=color;        
+    }
+    speak() // overriding the speak() method of the super class speak() method
+    {
+        return 'Labrador says WOOF';
+    }
+
+}
+let dog=new Dog('Dog'); // instance of the class Dog
+console.log('Dog says '+ dog.speak()); // calling Dog class speak() method
+let labrador=new Labrador(12,'black','L1'); //instance of the class Labrador
+console.log(labrador.speak());  // calling Labrador class speak method
+    </script>
+</body>
+</html>
